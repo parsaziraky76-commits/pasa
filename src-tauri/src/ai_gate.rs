@@ -25,6 +25,8 @@ impl AiGate {
         matches!(self, AiGate::Ready)
     }
 
+    /// شناسهٔ ماشین‌خوان برای رابط کاربری — تا صفحه دکمهٔ *درستِ* رفع مشکل را
+    /// نشان بدهد، نه یک «مشکلی پیش آمد» عمومی.
     pub fn code(self) -> &'static str {
         match self {
             AiGate::Ready => "READY",
